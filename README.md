@@ -1,5 +1,11 @@
 # Installation des Programms rtm_pi auf dem raspberry
-## Voraussetzung:
+## Voraussetzung: raspberry Hardware
+Raspberry Pi 4 mit mindestens 4 GB RAM und 32 GB micro SD. Original USB C Netzteil.        
+## Voraussetzung: raspberry Software/Konfiguration
+**Raspberry Pi OS** wird zum Beispiel mit dem Raspberry Pi Imager installiert.  Siehe https://www.raspberrypi.com/software/      
+Um die SD card voll auszunutzen, in raspi-config **Expand Filesystem** ausführen   
+**SSH Zugriff** z.B. in raspi-config aktivieren für user pi mit password raspberry 
+## Voraussetzung: zusätzliche Software git und make
 Bevor wir anfangen überprüfen wir, ob **git** und **make** auf dem raspberry installiert sind.   
 Prüfen, ob git installiert ist mit:   
 **git --version**   
@@ -10,7 +16,7 @@ Prüfen, on make installiert ist mit:
 
 ### Hinweis user root 
 **Das Programm rtm_pi muss als user **root** ausgeführt werden.    
-Daher auch den code von git als user root abholen und das Programm als user root mit make erzeugen**   
+Daher auch den code von von GitHub als user root abholen und das Programm als user root mit make erzeugen**   
 Dies ist im Folgenden durch den Befehl sudo -i sichergestellt.
 
 ## Schritt 1: raspberry code von Github auf den raspberry kopieren
@@ -39,16 +45,16 @@ Wechseln in Verzeichnis **500-rtm-pi** mit dem Befehl
 Den runtergeladenen Code kompilieren und daraus das Programm **rtm_pi** erstellen mit dem Befehl   
 **make**
 
-## Schritt 3: Kontrolle ob das Programm rtm_pi erzeugt wurde oder bereits vorhanden ist  
+## Schritt 3: Kontrolle ob das Programm rtm_pi erzeugt wurde bzw. bereits vorhanden ist  
 Bei Bedarf wechseln vom user pi zum user root mit    
 **sudo -i**
 
-Bei Bedarf Wechseln in Verzeichnis **500-rtm-pi** mit dem Befehl   
+Wechseln in Verzeichnis **500-rtm-pi** mit dem Befehl   
 **cd ~/git/500-rtm-pi-code/500-rtm-pi**
 
 Test-Aufruf des Programms rtm_pi mit   
 **./rtm_pi**   
-Das Programm sollte antworten mit:        
+Das Programm sollte antworten mit        
 **SPI setup successful**    
 
 Beenden des Programms mit **Strg C**
