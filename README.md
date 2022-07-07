@@ -1,10 +1,14 @@
 # Installation des Programms rtm_pi auf dem raspberry
 ## Voraussetzung: raspberry Hardware
-Raspberry Pi 4 mit mindestens 4 GB RAM und 32 GB micro SD. Original USB C Netzteil.        
+- Raspberry Pi 4   
+- mindestens 4 GB RAM    
+- mindestens 32 GB micro SD   
+- Original USB C Netzteil        
 ## Voraussetzung: raspberry Software/Konfiguration
-**Raspberry Pi OS** wird zum Beispiel mit dem Raspberry Pi Imager installiert.  Siehe https://www.raspberrypi.com/software/      
-Um die SD card voll auszunutzen, in raspi-config **Expand Filesystem** ausführen   
-**SSH Zugriff** z.B. in raspi-config aktivieren für user pi mit password raspberry 
+**Raspberry Pi OS** wird zum Beispiel mit dem Raspberry Pi Imager auf der SD card installiert.     
+Siehe https://www.raspberrypi.com/software/      
+**Expand Filesystem** in raspi-config ausführen, damit die komplette SD card genutzt werden kann      
+**SSH Zugriff** in raspi-config aktivieren für den user pi mit password raspberry. Damit der raspberry 'headless' genutzt werden kann
 ## Voraussetzung: zusätzliche Software git und make
 Bevor wir anfangen überprüfen wir, ob **git** und **make** auf dem raspberry installiert sind.   
 Prüfen, ob git installiert ist mit:   
@@ -14,9 +18,9 @@ Bei Bedarf Installation git siehe z.B  https://linuxize.com/post/how-to-install-
 Prüfen, on make installiert ist mit:   
 **make --version**
 
-### Hinweis user root 
+## Wichtiger Hinweis user root !!!
 **Das Programm rtm_pi muss als user **root** ausgeführt werden.    
-Daher auch den code von von GitHub als user root abholen und das Programm als user root mit make erzeugen**   
+Daher auch den code von von GitHub als user root runterladen und das Programm als user root mit make erzeugen**   
 Dies ist im Folgenden durch den Befehl sudo -i sichergestellt.
 
 ## Schritt 1: raspberry code von Github auf den raspberry kopieren
