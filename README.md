@@ -31,10 +31,10 @@ Nachdem wir als user pi angemeldet sind, wechseln zum user **root** mit
 **sudo -i**
 
 Verzeichnis git erstellen mit    
-**mkdir git**
+**mkdir ~/git**
 
 In Verzeichnis git wechseln mit    
-**cd git**
+**cd ~/git**
 
 Code von GitHub auf den raspberry kopieren mit   
 **git clone https://github.com/PeterDirnhofer/500-rtm-pi-code.git**
