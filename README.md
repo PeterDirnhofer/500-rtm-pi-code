@@ -14,35 +14,36 @@ So geht's https://www.heise.de/tipps-tricks/Raspberry-Pi-SSH-einrichten-so-geht-
 ### zusätzliche Software auf raspberry: git und make
 Bevor wir anfangen überprüfen wir, ob **git** und **make** auf dem raspberry installiert sind. Wie prüfen, ob git bereits installiert ist mit:  
 **git --version**   
-Bei Bedarf Nach-Installation git.   
+Falls git noch nicht installiert ist, installieren wir es nach.      
 So geht's  https://linuxize.com/post/how-to-install-git-on-raspberry-pi/
 
-raspberry Pi OS unterstützt standarmässig C und C++. Ob dies auch auf unserem raspberry zutrifft, können wir prüfen mit den Aufruf von          
+raspberry Pi OS unterstützt standarmässig C und C++ also sollte make bereits installiert sein. Ob dies wirklich der Fall ist, können wir prüfen mit dem Aufruf von          
 **make --version**
 
-### Anmeldung als user root !!!
-**Das Programm rtm_pi muss als user **root** ausgeführt werden.    
-Daher müüsen wir den code von von GitHub als user root runterladen und das Programm als user root mit make erzeugen**   
+### Anmeldung als user root im commandline mode!!!
+Das Programm rtm_pi wird vom user **root im command line modus** ausgeführt.    
+Daher klonen wir den C++ code als user root von GitHub und kompilieren und erzeugen das Programm rtm_pi mit make ebenfalls als user root.   
 Zur Beruhigung: Die Ausführung als user root ist den folgenden Befehlssequenzen durch den vorangestellten Befehl **sudo -i** sichergestellt.
 
 ## Installation rtm_pi Schritt 1: C++ Code Dateien von Github auf den raspberry kopieren
 
-Zunächst Anmmeldung im raspberry wie gewohnt als user **pi** mit password **raspberry**     
+Zunächst melden wir uns am raspberry an als user **pi** mit password **raspberry**      
+   
 Nachdem wir als user pi angemeldet sind, wechseln zum user **root** mit   
 **sudo -i**
 
-Verzeichnis git erstellen mit    
+Wir erstellen das Verzeichnis git mit    
 **mkdir ~/git**
 
-In Verzeichnis git wechseln mit    
+Wir wechseln in das neue verzeichnis git       
 **cd ~/git**
 
-Code von GitHub auf den raspberry kopieren mit   
+Wir kopieren den Code von GitHub in das Verzeichnis git mit dem Befehl   
 **git clone https://github.com/PeterDirnhofer/500-rtm-pi-code.git**
 
 ## Installation rtm_pi Schritt 2: Programm rtm_pi erstellen mit make 
-Bei Bedarf wechseln vom user pi zum user root mit    
-**sudo -i**
+Bei Bedarf wechseln wir vom user pi zum user root mit    
+**sudo -i**   
 
 Wechseln in Verzeichnis **500-rtm-pi** mit dem Befehl   
 **cd ~/git/500-rtm-pi-code/500-rtm-pi**
@@ -51,7 +52,7 @@ Den im vorhergehenden Schritt runtergeladenen C++ Code kompilieren und daraus da
 **make**
 
 ## Schritt 3: Kontrolle ob das Programm rtm_pi erzeugt wurde und gestartet werden kann 
-Bei Bedarf wechseln vom user pi zum user root mit    
+Bei Bedarf wechseln wir vom user pi zum user root mit    
 **sudo -i**
 
 Wechseln in Verzeichnis **500-rtm-pi** mit dem Befehl   
