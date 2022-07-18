@@ -4,7 +4,7 @@
 raspberry Pi 4 mit mindestens 4 GB RAM und mindestens 32 GB micro SD   
 Original raspberry USB C Netzteil        
 ### raspberry Software/Konfiguration
-**Raspberry Pi OS** wird zum Beispiel mit dem Raspberry Pi Imager auf der SD card installiert.    
+**Raspberry Pi OS** Wir installieren das Betriebssystem mit dem **Raspberry Pi Imager** auf die SD card    
 So geht's https://www.raspberrypi.com/software/  
 
 **Expand Filesystem** nach der Installation in **sudo raspi-config** ausführen, damit die kompletten 32GB der SD card genutzt werden können      
@@ -33,7 +33,8 @@ Nachdem wir als user pi angemeldet sind, wechseln zum user **root** mit
 **sudo -i**
 
 Wir erstellen das Verzeichnis git mit    
-**mkdir ~/git**
+**mkdir ~/git**   
+Hinweis: das **~** Zeichen finden wir mit **Alt Gr** auf der Taste links neben der Eingabetaste      
 
 Wir wechseln in das neue verzeichnis git       
 **cd ~/git**
