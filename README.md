@@ -45,22 +45,25 @@ Wir kopieren den Code von GitHub in das Verzeichnis git mit dem Befehl
 Bei Bedarf wechseln wir vom user pi zum user root mit    
 **sudo -i**   
 
-Wechseln in Verzeichnis **500-rtm-pi** mit dem Befehl   
+Wir wechseln in das Verzeichnis **500-rtm-pi** mit   
 **cd ~/git/500-rtm-pi-code/500-rtm-pi**
 
-Den im vorhergehenden Schritt runtergeladenen C++ Code kompilieren und daraus das Programm **rtm_pi** erstellen mit dem Befehl   
+Wir kompilieren den im vorhergehenden Schritt geklonten C++ Code und erstellen das Programm **rtm_pi** mit     
 **make**
 
 ## Schritt 3: Kontrolle ob das Programm rtm_pi erzeugt wurde und gestartet werden kann 
 Bei Bedarf wechseln wir vom user pi zum user root mit    
 **sudo -i**
 
-Wechseln in Verzeichnis **500-rtm-pi** mit dem Befehl   
+Wir wechseln in das Verzeichnis **500-rtm-pi** mit     
 **cd ~/git/500-rtm-pi-code/500-rtm-pi**
 
-Test-Aufruf des Programms rtm_pi mit   
+Wir testen, ob sich das Programm rtm_pi starten lässt mit   
+(Den führenden Punkt beachten !)      
 **./rtm_pi**   
-Das Programm sollte antworten mit        
+
+
+Wenn alles ok ist, antwortet das Programm mit        
 **SPI setup successful**    
 
-Beenden des Programms mit **Strg C**
+Wir beenden das Programm mit **Strg C**
